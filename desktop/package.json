@@ -1,0 +1,36 @@
+{
+  "name": "cairn-desktop",
+  "productName": "Cairn",
+  "version": "0.1.0",
+  "description": "Cairn desktop app: a local-first Markdown notebook where notes are plain .md files.",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac dmg"
+  },
+  "devDependencies": {
+    "electron": "^45.3.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.jukeiss.cairn",
+    "productName": "Cairn",
+    "asar": false,
+    "files": [
+      "main.js",
+      "cairn-app/**/*",
+      "!cairn-app/vault/**",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.productivity"
+    },
+    "dmg": {
+      "title": "Cairn"
+    }
+  }
+}
