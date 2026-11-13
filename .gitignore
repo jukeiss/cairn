@@ -55,3 +55,6 @@ server.log
 # vault & local data
 /vault/
 *.tmp-*
+desktop/node_modules/
+desktop/dist/
+desktop/cairn-app/
